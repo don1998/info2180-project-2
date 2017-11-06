@@ -1,3 +1,6 @@
+//I implemented the multiple backgrounds extra feature.
+
+
 window.onload=myfunction;
 
 var blankleft=300;
@@ -8,12 +11,52 @@ function myfunction(){
 	var t = 3; 
  	var j = 0;
  	var currstate=[];
+
+
+
+ 	var para1=document.createElement('p');
+ 	para1.innerHTML="Backgrounds";
+ 	document.getElementById("overall").appendChild(para1);
+ 	var radioInput = document.createElement('input');
+	radioInput.setAttribute('type', 'button');
+	radioInput.setAttribute('id', 'zed');
+	radioInput.setAttribute('value', 'Riven');
+	document.getElementById("overall").appendChild(radioInput);
+	
+
+
+	var para2=document.createElement('p');
+ 	document.getElementById("overall").appendChild(para2);
+ 	var radioInput2 = document.createElement('input');
+	radioInput2.setAttribute('type', 'button');
+	radioInput2.setAttribute('id', 'corki');
+	radioInput2.setAttribute('value', 'Yasuo');
+	document.getElementById("overall").appendChild(radioInput2);
+
+
+	var para3=document.createElement('p');
+ 	document.getElementById("overall").appendChild(para3);
+ 	var radioInput3 = document.createElement('input');
+	radioInput3.setAttribute('type', 'button');
+	radioInput3.setAttribute('id', 'jon');
+	radioInput3.setAttribute('value', 'Jon');
+	document.getElementById("overall").appendChild(radioInput3);
+
+	var para4=document.createElement('p');
+ 	document.getElementById("overall").appendChild(para4);
+ 	var radioInput4 = document.createElement('input');
+	radioInput4.setAttribute('type', 'button');
+	radioInput4.setAttribute('id', 'tyrion');
+	radioInput4.setAttribute('value', 'Tyrion');
+	document.getElementById("overall").appendChild(radioInput4);
+
+
  	for (let i=0; i<divs.length;i++) { 
  		for (var a = 0; a <= t; a++) { 
  			divs[i].classList.add("puzzlepiece");
  			divs[i].style.left = 100 * a + "px";  
  			divs[i].style.top = 100 * j + "px"; 
- 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px"; 
+ 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px";
  			divs[i].addEventListener("click", swap);
  			divs[i].addEventListener("mouseover", colorchange);
  			i++; 
@@ -24,6 +67,93 @@ function myfunction(){
  			} 
  		i--; 
  	}
+
+ 	document.getElementById("zed").addEventListener("click",function(){
+ 			var t = 3; 
+ 			var j = 0;
+ 		for (let i=0; i<divs.length;i++){
+ 			for (var a = 0; a <= t; a++) { 
+ 			divs[i].classList.add("puzzlepiece");
+ 			divs[i].setAttribute('style',"background-image:url('Zed.jpg')");
+ 			divs[i].style.left = 100 * a + "px";  
+ 			divs[i].style.top = 100 * j + "px"; 
+ 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px";
+ 			i++; 
+ 			} 
+ 		j++; 3
+ 		if (j > 2) { 
+ 			t = 2; 
+ 			} 
+ 		i--; 	
+ 			}
+
+	});
+
+
+	 	document.getElementById("corki").addEventListener("click",function(){
+ 			var t = 3; 
+ 			var j = 0;
+ 		for (let i=0; i<divs.length;i++){
+ 			for (var a = 0; a <= t; a++) { 
+ 			divs[i].classList.add("puzzlepiece");
+ 			divs[i].setAttribute('style',"background-image:url('Corki.jpeg')");
+ 			divs[i].style.left = 100 * a + "px";  
+ 			divs[i].style.top = 100 * j + "px"; 
+ 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px";
+ 			i++; 
+ 			} 
+ 		j++; 3
+ 		if (j > 2) { 
+ 			t = 2; 
+ 			} 
+ 		i--; 	
+ 			}
+
+	});
+
+
+	 document.getElementById("jon").addEventListener("click",function(){
+ 			var t = 3; 
+ 			var j = 0;
+ 		for (let i=0; i<divs.length;i++){
+ 			for (var a = 0; a <= t; a++) { 
+ 			divs[i].classList.add("puzzlepiece");
+ 			divs[i].setAttribute('style',"background-image:url('Jon.jpg')");
+ 			divs[i].style.left = 100 * a + "px";  
+ 			divs[i].style.top = 100 * j + "px"; 
+ 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px";
+ 			i++; 
+ 			} 
+ 		j++; 3
+ 		if (j > 2) { 
+ 			t = 2; 
+ 			} 
+ 		i--; 	
+ 			}
+
+	});
+
+
+	 	 document.getElementById("tyrion").addEventListener("click",function(){
+ 			var t = 3; 
+ 			var j = 0;
+ 		for (let i=0; i<divs.length;i++){
+ 			for (var a = 0; a <= t; a++) { 
+ 			divs[i].classList.add("puzzlepiece");
+ 			divs[i].setAttribute('style',"background-image:url('Tyrion.jpg')");
+ 			divs[i].style.left = 100 * a + "px";  
+ 			divs[i].style.top = 100 * j + "px"; 
+ 			divs[i].style.backgroundPosition = -a * 100 + "px " + j * -100 + "px";
+ 			i++; 
+ 			} 
+ 		j++; 3
+ 		if (j > 2) { 
+ 			t = 2; 
+ 			} 
+ 		i--; 	
+ 			}
+
+	});
 
 
  	document.getElementById("shufflebutton").addEventListener("click",shuffle);
